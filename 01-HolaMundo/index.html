@@ -8,17 +8,26 @@
     <title>Hola Mundo</title>
 </head>
 <body>
-    <h1 id="app"> {{message}}</h1>
+    <div id="app">
+        <h1>{{message}}</h1>
+    </div>
+    
+
+    <script src="./main.js"></script>
+    <script>
+        const mountApp = app.mount("#app")
+    </script>
 </body>
 </html>
 
 
+
 <script>
-    let app = Vue.createApp({
-        data(){
-            return {
-                message: "Hola mundo desde Vue3"
-            }
-        }
-    }).mount("#app")
+    // let app = Vue.createApp({
+    //     data(){
+    //         return {
+    //             message: "Hola mundo desde Vue3"
+    //         }
+    //     }
+    // }).mount("#app")
 </script>
