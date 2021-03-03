@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios Vue3</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>{{title}}</h1>
+        <form @submit.prevent="handleSubmit()">
+            Nombre: <input type="text" placeholder="Nombre" v-model.trim="datos.name" ><br>
+            Numerico: <input type="number" name="Edad" id="edad" placeholder="ingrese su edad" 
+            v-model.number="datos.age" min="10" max="100"> <br>
+            <hr>
+            <h2>Lenguajes Favoritos</h2>
+            <input type="checkbox" name="" id="js" value="js" v-model="datos.langs" >
+            <label for="js">JavaScript</label>
+            <input type="checkbox" name="" id="php" value="php" v-model="datos.langs">
+            <label for="php">PHP</label>
+            <input type="checkbox" name="" id="py"  value="py" v-model="datos.langs">
+            <label for="py">Python</label>
+            <hr>
+            <h2>Genero</h2>
+            <input type="radio" name="" id="hombre" value="m" v-model="datos.gener">
+            <label for="hombre">Hombre</label>
+            <input type="radio" name="" id="mujer" value="f" v-model="datos.gener">
+            <label for="mujer">Mujer</label>
+
+            <hr>
+            <input type="submit"/>
+        </form>
+
+
+        
+    </div>
+
+
+    <script src="./js/main.js"></script>
+    <script src="./js/mountApp.js"></script>
+</body>
+</html>
